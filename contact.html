@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Vosloorus United FC - Vosloorus Stadium</title>
+  <meta name="description" content="Contact Vosloorus United FC in Vosloorus. Send general enquiries, complaints or feedback. Located at Vosloorus Stadium, Gauteng.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">VOSLOORUS UNITED FC</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programmes.html">Programmes</a></li>
+      <li><a href="fixtures.html">Fixtures</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- YOUR CONTACT FORM GOES HERE -->
+<section>
+  <h1>Contact Us</h1>
+  <form id="contactForm" onsubmit="validateContact(event)" action="mailto:info@vosloorusunited.co.za" method="post" enctype="text/plain">
+    <label>Name:</label>
+    <input type="text" id="cont-name" required>
+    
+    <label>Email:</label>
+    <input type="email" id="cont-email" required>
+    
+    <label>Message Type:</label>
+    <select id="cont-type" required>
+      <option value="general">General Enquiry</option>
+      <option value="complaint">Complaint</option>
+      <option value="feedback">Feedback</option>
+    </select>
+    
+    <label>Your Message:</label>
+    <textarea id="cont-message" required minlength="15"></textarea>
+    
+    <p id="cont-error" style="color:red;"></p>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 Vosloorus United FC - Vosloorus Stadium</p>
+</footer>
+
+<!-- SCRIPTS AT BOTTOM -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

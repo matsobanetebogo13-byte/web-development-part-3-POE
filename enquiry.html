@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Sponsor Volunteer | Vosloorus United FC</title>
+  <meta name="description" content="Enquire about sponsoring Vosloorus United FC, volunteering, or joining as a player in Vosloorus.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">VOSLOORUS UNITED FC</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programmes.html">Programmes</a></li>
+      <li><a href="fixtures.html">Fixtures</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enquiry.html" class="active">Enquiry</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- YOUR SECTION GOES HERE - BETWEEN HEADER AND FOOTER -->
+<section>
+  <h1>Enquiry - Sponsor / Volunteer</h1>
+  <form id="enquiryForm" onsubmit="validateEnquiry(event)" action="#" method="post">
+    <label>Name:</label>
+    <input type="text" id="enq-name" required minlength="3">
+    
+    <label>Email:</label>
+    <input type="email" id="enq-email" required>
+    
+    <label>Phone (10 digits):</label>
+    <input type="tel" id="enq-phone" pattern="[0-9]{10}" required>
+    
+    <label>Enquiry Type:</label>
+    <select id="enq-type" required>
+      <option value="">Select</option>
+      <option value="sponsor">Become a Sponsor</option>
+      <option value="volunteer">Volunteer</option>
+      <option value="player">Join as Player</option>
+      <option value="services">Club Services</option>
+    </select>
+    
+    <label>Message:</label>
+    <textarea id="enq-message" required minlength="10"></textarea>
+    
+    <p id="enq-error" style="color:red;"></p>
+    <button type="submit" class="btn">Submit Enquiry</button>
+  </form>
+  <div id="map" style="height:300px; margin-top:20px;"></div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Vosloorus United FC - Vosloorus Stadium</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
